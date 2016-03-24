@@ -1,0 +1,7 @@
+services_list.services_filter:
+  version: VERSION
+  js:
+    js/services_filter.js: {}
+  css:
+    theme:
+      css/services_filter.css: {}

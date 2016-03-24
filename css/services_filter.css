@@ -1,0 +1,18 @@
+/**
+ * @file
+ * Styles for services list.
+ */
+
+.services-filter-block {
+  margin-bottom: 20px;
+}
+
+.service-link {
+  display: block;
+}
+
+.service-invisible {
+  display: none;
+  width: 0;
+  height: 0;
+}

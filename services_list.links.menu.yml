@@ -1,0 +1,16 @@
+services_list.listing:
+  title: 'Service container'
+  description: 'Service container explorer'
+  parent: system.admin_config_development
+  route_name: services_list.listing
+  weight: 100
+  #If menu_name is omitted, the "Tools" menu will be used.
+  menu_name: devel
+devel.services_list:
+  title: 'Service container'
+  description: 'Service container explorer'
+  parent: admin_development
+  route_name: services_list.listing
+  weight: 100
+  #If menu_name is omitted, the "Tools" menu will be used.
+  menu_name: devel

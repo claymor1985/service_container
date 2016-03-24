@@ -1,0 +1,6 @@
+name: Services list
+core: 8.x
+description: Service container debug for devs
+package: MKS
+type: module
+

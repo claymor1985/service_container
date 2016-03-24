@@ -1,0 +1,14 @@
+services_list.listing:
+  path: '/admin/developmnet/services'
+  defaults:
+    _controller: '\Drupal\services_list\Controller\ServicesListController::content'
+    _title: 'Services'
+  requirements:
+    _permission: access content
+services_list.service_info:
+  path: '/ajax/services_list/{service_id}'
+  defaults:
+    _controller: '\Drupal\services_list\Controller\ServicesListController::ajaxCallback'
+    _title: 'Service info'
+  requirements:
+    _permission: access content

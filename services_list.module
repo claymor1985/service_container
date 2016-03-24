@@ -1,0 +1,24 @@
+<?php
+
+/**
+* @file
+* Contains services_list.module
+*/
+
+/**
+ * Implements hook_theme().
+ */
+function services_list_theme() {
+  return array(
+    'services_list' => array(
+      'variables' => array('links' => []),
+    ),
+  );
+}
+
+/**
+ * Preprocess service_list variables.
+ */
+function template_preprocess_services_list(&$vars) {
+  $vars['columns'] = array_chunk($vars['links'], 100);
+}

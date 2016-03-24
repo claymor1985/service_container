@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Default theme implementation for services list.
+ *
+ * Available variables:
+ * - links: Contains the array of links with services.
+ */
+#}
+
+<div class="service-info"></div>
+<div class="services-filter-block">
+  <input type="text" class="services-filter" />
+  <a href="#" class="service-filter-reset">{{ "Reset filter" | t }}</a>
+</div>
+{% if links %}
+  <div class="services-list">
+      {% for link in links %}
+      <div class="service-link">
+        <a href={{ link.url }} class='use-ajax' data-service-name='{{ link.text }}'>{{ link.text }}</a>
+      </div>
+      {% endfor %}
+  </div>
+
+{% endif %}
