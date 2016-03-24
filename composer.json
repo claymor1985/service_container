@@ -1,0 +1,13 @@
+{
+  "name": "mks/service_list",
+  "description": "Service list with ability to explore service methods and properties.",
+  "type": "drupal-module",
+  "authors": [
+    {
+      "name": "Maxim Krestnikov",
+      "homepage": "https://www.drupal.org/u/claymor"
+    }
+  ],
+  "license": "GPL-2.0+",
+  "require": { }
+}
