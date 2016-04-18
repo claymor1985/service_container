@@ -17,7 +17,7 @@
   <div class="services-list">
       {% for link in links %}
       <div class="service-link">
-        <a href={{ link.url }} class='use-ajax' data-service-name='{{ link.text }}'>{{ link.text }}</a>
+        {{ link }}
       </div>
       {% endfor %}
   </div>

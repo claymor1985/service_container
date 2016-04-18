@@ -3,26 +3,47 @@
  * Defines Javascript behaviors for service list filter.
  */
 
-(function ($) {
+(function () {
 
-  $filter = $('.services-filter');
+  var showServices = function(elements) {
+    [].forEach.call(elements, function(elem) {
+      elem.classList.remove('service-invisible');
+    });
+  };
 
-  $filter.on("keyup", function() {
-    if ($(this).val()) {
-      var input = $(this).val();
-      $filteredServices = $('.service-link a[data-service-name*='+ input +']').parent();
-      $('.service-link').addClass('service-invisible');
-      $filteredServices.removeClass('service-invisible');
+   var hideServices = function(elements) {
+    [].forEach.call(elements, function(elem) {
+      elem.classList.add('service-invisible');
+    });
+  };
+
+  var filter = document.querySelector('.services-filter');
+  var allServices = document.querySelectorAll('.service-link');
+
+  filter.onkeyup = function() {
+
+    if (this.value) {
+
+      var input = this.value;
+      var links = document.querySelectorAll('.service-link a[data-service-name*='+ input +']');
+
+      var filteredServices = [];
+      [].forEach.call(links, function(elem) {
+        filteredServices.push(elem.parentElement);
+      });
+
+      hideServices(allServices);
+      showServices(filteredServices);
     }
     else {
-      $('.service-link').removeClass('service-invisible');
+      showServices(allServices);
     }
-  });
+  };
 
-  $('.service-filter-reset').on("click", function(){
-    $filter.val('');
-    $('.service-link').removeClass('service-invisible');
-  });
+  filterReset = document.querySelector('.service-filter-reset');
+  filterReset.onclick = function() {
+    filter.value = '';
+    showServices(allServices);
+  };
 
-
-})(jQuery);
+})();
