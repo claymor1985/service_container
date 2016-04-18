@@ -9,7 +9,7 @@
     }
   ],
   "require": {
-    "fzaninotto/faker": "^1.5",
+    "fzaninotto/faker": "^1.5"
   },
   "license": "GPL-2.0+"
 }
