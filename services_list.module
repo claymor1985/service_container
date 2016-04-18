@@ -13,6 +13,9 @@ function services_list_theme() {
     'services_list' => array(
       'variables' => array('links' => []),
     ),
+    'services_link' => array(
+      'variables' => array('text' => '', 'url' => '', 'attributes' => []),
+    ),
   );
 }
 
