@@ -8,9 +8,8 @@
       "homepage": "https://www.drupal.org/u/claymor"
     }
   ],
-  "require": [
+  "require": {
     "fzaninotto/faker": "^1.5",
-  ],
-  "license": "GPL-2.0+",
-  "require": { }
+  },
+  "license": "GPL-2.0+"
 }
