@@ -35,7 +35,15 @@ class ServicesListController extends ControllerBase
     $service_ids = $container->getServiceIds();
     $links = [];
     foreach ($service_ids as $service_id) {
-
+      if (in_array($service_id, [
+        'metatag.generate_tag',
+        'metatag.generate_group',
+        'metatag.tag_generator',
+        'metatag.group_generator',
+      ])) {
+        continue;
+      }
+      
       // Get service info.
       $serviceInfo = \Drupal::service($service_id);
       $comment = '';
